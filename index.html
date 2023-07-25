@@ -7,9 +7,199 @@
     <title>fruit burst</title>
     <!-- add a favicon  -->
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- tailwindcss castom color  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- daisyui and tailwindcss cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css style  -->
+    <style>
+        .lato_font {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+    <!-- font asum kit  -->
+    <script src="https://kit.fontawesome.com/8f1729ba3e.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="lato_font">
+    <header class=" max-w-screen-xl mx-auto">
+        <!-- nav start  -->
+        <nav class="max-w-screen-xl mx-auto ">
+            <div class="navbar text-white font-bold    bg-[#F85559] rounded-3xl ">
+
+                <div class="navbar-center   hidden lg:flex items-center ">
+                    <ul class="menu  menu-horizontal px-1">
+                        <li><a>Home</a></li>
+
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+                <div class="flex  justify-between  items-center flex-row-reverse navbar-start    lg:p-5  ">
+                    <div class="dropdown ">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu bg-[#F85559]   menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+
+                            <li><a>About Us</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>All Fruits</a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="flex">
+                        <a class="btn  btn-ghost normal-case  text-1xl"><img src="./images/logo.png" alt="">
+
+                        </a>
+                        <h2 class="text-3xl  text-white font-extrabold ">Fruit Burst</h2>
+                    </div>
+
+
+                </div>
+                <div class=" hidden  lg:flex navbar-end ">
+                    <div class="form-control ">
+
+                        <label class="input-group rounded-3xl  bg-white">
+                            <input type="text" placeholder="Search here" class="input input-bordered" />
+                            <span class="bg-white"><i
+                                    class=" p-2   fa-solid fa-magnifying-glass text-black text-2xl"></i></span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <!-- banar start  -->
+        <div class="relative">
+            <div class="carousel w-full rounded-lg mt-12 ">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <div class="hero min-h-screen" style="background-image: url(./images/banner1.png);">
+                        <div class="hero-overlay bg-opacity-60"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md">
+                                <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your <br> doorstep</h1>
+                                <p class="mb-5">We supply highly quality organic products</p>
+                                <button class="btn btn-primary bg-[#F85559] border-2 border-red-600">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <div class="hero min-h-screen" style="background-image: url(./images/banner2.png);">
+                        <div class="hero-overlay bg-opacity-60"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md">
+                                <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your <br> doorstep</h1>
+                                <p class="mb-5">We supply highly quality organic products</p>
+                                <button class="btn btn-primary bg-[#F85559] border-2 border-red-600">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <div class="hero min-h-screen" style="background-image: url(./images/banner3.png);">
+                        <div class="hero-overlay bg-opacity-60"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md">
+                                <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your <br> doorstep</h1>
+                                <p class="mb-5">We supply highly quality organic products</p>
+                                <button class="btn btn-primary bg-[#F85559] border-2 border-red-600">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <div class="hero min-h-screen" style="background-image: url(./images/banner4.png);">
+                        <div class="hero-overlay bg-opacity-60"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-md">
+                                <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your <br> doorstep</h1>
+                                <p class="mb-5">We supply highly quality organic products</p>
+                                <button class="btn btn-primary bg-[#F85559] border-2 border-red-600">Shop Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- fruit start  -->
+            <div class=" flex justify-center items-center">
+
+                <div class=" absolute hidden lg:flex justify-center items-center  bg-white gap-x-10 p-14 rounded-3xl">
+                    <div class="text-center">
+                        <img src="./images/fruit1.png" alt="">
+                        <h2 class="">Grapes </h2>
+                    </div>
+                    <div class="text-center">
+                        <img src="./images/fruit2.png" alt="">
+                        <h2 class="">Orange </h2>
+                    </div>
+                    <div class="text-center">
+                        <img src="./images/fruit3.png" alt="">
+                        <h2 class="">mango </h2>
+                    </div>
+                    <div class="text-center">
+                        <img src="./images/fruit4.png" alt="">
+                        <h2 class="">strawberry </h2>
+                    </div>
+                    <div class="text-center">
+                        <img src="./images/fruit5.png" alt="">
+                        <h2 class=""> Pomegranate </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 
 </body>
 
